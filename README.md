@@ -34,7 +34,7 @@ Clone this repository or download the `points_api.py` file.
 Navigate to the directory where `points_api.py` is saved and execute:
 
 ```bash
-python points_api.py
+python3 points_api.py
 ```
 
 The API will start, and you can access it at [http://localhost:8000](http://localhost:8000).
@@ -95,7 +95,7 @@ The API will start, and you can access it at [http://localhost:8000](http://loca
 To ensure the system's reliability and correctness, a testing suite is provided. Navigate to the directory containing `test_points_api.py` and execute:
 
 ```bash
-python test_points_api.py
+python3 test_points_api.py
 ```
 
 You should see an output indicating the number of tests run and their results.

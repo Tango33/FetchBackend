@@ -52,6 +52,11 @@ def spend_user_points(points):
     1. Spend the oldest points first.
     2. No payer's points should go negative.
 
+    Considering the operations, the dominant factor is the while loop,
+    which iterates over the transactions The worst-case scenario is the loop running all transactions.
+    Therefore, the overall time complexity of the spend_user_points function is
+    O(n), where n is the number of transactions.
+
     Args:
         points (int): The total number of points the user wishes to spend.
 

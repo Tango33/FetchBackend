@@ -1,0 +1,36 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise? 
+- Language - Python: I chose Python because it's a versatile and widely-used language. Python’s clear syntax allows for easy readability and maintainability, while also providing a vast standard library that makes it suitable for a variety of tasks.
+
+- Framework - Flask: Flask is a lightweight, micro web framework in Python that is well-suited for small to medium web applications. Its simplicity and extensibility make it a great choice for this task. Flask provides the essential tools to set up endpoints without the overhead of a larger framework.
+
+- Libraries:
+	- bisect.insort: This module provides a way to maintain a list in sorted order without having to re-sort the list after an insertion, which is efficient. I used it to 	   ensure that transactions are maintained in a sorted manner based on timestamps.
+	- collections.deque: The deque (double-ended queue) is a double ended stack. It's ideal for our use case because we need to efficiently pop transactions from the front while maintaining the order.
+
+2. What are the advantages and disadvantages of your solution?
+
+Advantages:
+
+- Efficiency: Transactions are kept sorted by timestamp, which allow us to quickly access the oldest transactions without the need to search through the list
+
+- Extensibility: The Flask framework makes it easy to extend the application by adding more routes or integration with other systems
+
+- Modularity: The code is organized into classes and functions, promoting reusability and maintainability. Helper classes like SpentPointsHelper ensure separation of concerns.
+
+- In-Memory Storage: For this coding exercise, using in-memory storage (like deque and dictionary) ensures fast access times.
+
+Disadvantages:
+
+- Scalability: For the purposes of this coding exercise, I have assumed that the program is only working with a single user, according to the specifications. The current solution uses in-memory storage, which means all data would be lost if the server restarts, but this approach isn't suitable for a production environment with many users or if persistence of data is required.
+
+- Concurrency: Since the specifications talk about only The current implementation might face issues in a multi-threaded environment where multiple requests are being processed simultaneously. If two spend requests could be processed at the same time, it might lead to race conditions.
+
+- No User Management: Since we assume we have a single user, we don’t have any type of security, however, for multiple users, we would incorporate security solutions in place.
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you? 
+
+I wanted to create a game called "Hunt the Wumpus" using C++, . In the game, the player, navigates through a labyrinth, a series of connected caves, which are arranged in dodecahedron shape and also have hazards that will kill you in order to kill the mythical monster. If you fail to catch Wumpus or run into a hazard, you will die and will have to try again. I had to implement something that kept track of the player’s moves and allowed them to go back to their previous move in order to keep their progress but have another chance to kill the mythical monster.
+
+I knew I needed some kind of "magic" to make it work, but I didn't know what that magic was. So, I turned to research. That's when I stumbled upon Linked Lists. After diving deeper into Linked Lists, I found the perfect fit for my game: linked lists. It was a eureka moment, and players had the ability to backtrack and resume their game.
+
+Sometimes, most challenging part of a project is not knowing the solution, but the joy of discovery and the power of research can turn hurdles into stepping stones to success. This was my introduction to object oriented programming and complex data structures, so to be able to know that I can build anything in the field oc computer science with just my will to research was a pivotal moment.
